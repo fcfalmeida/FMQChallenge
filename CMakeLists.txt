@@ -8,9 +8,19 @@ include(CTest)
 enable_testing()
 
 add_subdirectory(external/SFML)
-add_subdirectory(src)
 
-add_executable(FMQChallenge src/main.cpp)
+add_executable(FMQChallenge
+    src/node.h
+    src/node.cpp
+    src/sprite_node.h
+    src/sprite_node.cpp
+    src/scene.h
+    src/scene.cpp
+    src/game.h
+    src/game.cpp
+    src/asset_manager.h
+    src/main.cpp
+)
 
 target_include_directories(${PROJECT_NAME} PUBLIC external/SFML/include)
 target_link_directories(${PROJECT_NAME} PRIVATE external/SFML/src)
@@ -21,7 +31,6 @@ target_link_libraries(${PROJECT_NAME}
     sfml-audio
     sfml-system
 )
-
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
