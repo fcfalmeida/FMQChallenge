@@ -29,7 +29,6 @@ void Game::start()
 
     while (window.isOpen())
     {
-        processEvents();
         timeSinceLastUpdate += clock.restart();
 
         while (timeSinceLastUpdate > timePerFrame)
@@ -51,7 +50,7 @@ void Game::processEvents()
         if (event.type == sf::Event::Closed)
             window.close();
 
-        if (event.type == sf::Event::KeyPressed)
+        if (event.type == sf::Event::KeyReleased)
         {
             if (event.key.code == sf::Keyboard::Enter)
             {
