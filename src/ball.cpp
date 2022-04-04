@@ -1,5 +1,4 @@
 #include "ball.h"
-#include <iostream>
 
 Ball::Ball(sf::Texture& texture, sf::Vector2f velocity)
     :   SpriteElement(texture),
