@@ -3,6 +3,7 @@
 #include <string>
 #include <SFML/Graphics.hpp>
 
+// Restrict template to types that implement getLocalBounds()
 template <class T>
 concept HasBounds = std::is_base_of<sf::Sprite, T>::value || std::is_base_of<sf::Text, T>::value;
 

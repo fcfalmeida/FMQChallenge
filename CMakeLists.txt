@@ -18,7 +18,6 @@ add_executable(FMQChallenge
     src/game.h
     src/game.cpp
     src/element.h
-    src/element.cpp
     src/sprite_element.h
     src/sprite_element.cpp
     src/text_element.h

@@ -26,6 +26,8 @@ void Game::start()
     sf::Clock clock;
     sf::Time timeSinceLastUpdate = sf::Time::Zero;
 
+    // Main game loop. Runs at a fixed rate according to TARGET_FRAMERATE.
+    // Process input -> update -> render
     while (window.isOpen())
     {
         timeSinceLastUpdate += clock.restart();
@@ -128,6 +130,7 @@ void Game::calculateWinnings()
 {
     int creditsWon = 0;
 
+    // Gain 1 credit for every ball that reaches the end with the winning color
     for (auto& ball : ballHolder.balls)
     {
         if (ball.getColor() == WINNING_COLOR)
