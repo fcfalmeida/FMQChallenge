@@ -1,5 +1,4 @@
 #include "game.h"
-#include <iostream>
 
 Game::Game()
 :   window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "FMQ Challenge"),
@@ -136,8 +135,6 @@ void Game::calculateWinnings()
     }
 
     insertCredits(creditsWon);
-
-    std::cout << "Credits: " << insertedCredits << std::endl;
 }
 
 void Game::play()
