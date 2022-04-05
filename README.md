@@ -6,6 +6,10 @@ This project was done as part of a test proposed by [Fabamaq](https://www.fabama
 
 If you simply want to try out the game, there are Windows and Linux releases available. 
 
+## The Game
+
+On the screen, you will see a line of 50 white balls. When the Enter key is pressed, the balls start travelling upwards while their color changes randomly. For every ball that reaches the end with the color green, you win 1 credit. Pressing Z will add a credit to the game (every play requires 1 credit) and pressing X will take those credits out.
+
 ## Building from source
 
 If you want to build the project yourself, first you must obtain it, as well as the required git submodules.
