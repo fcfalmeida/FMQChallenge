@@ -9,6 +9,11 @@ enable_testing()
 
 add_subdirectory(external/SFML)
 
+set(CMAKE_SKIP_BUILD_RPATH FALSE)
+set(CMAKE_BUILD_WITH_INSTALL_RPATH FALSE)
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+set(CMAKE_INSTALL_RPATH "lib/")
+
 add_executable(FMQChallenge
     src/game.h
     src/game.cpp
@@ -40,6 +45,9 @@ target_link_libraries(${PROJECT_NAME}
 if (UNIX AND NOT APPLE)
     target_compile_options(FMQChallenge PRIVATE -fconcepts)
 endif()
+
+install(TARGETS FMQChallenge DESTINATION "")
+install(DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/assets/ DESTINATION assets/)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
